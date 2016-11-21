@@ -25,7 +25,9 @@ function compre(){var a=document.getElementById("comwr").value;document.getEleme
 
 $(document).ready(function(){$("#PopularPosts1 , #PopularPosts2 , #PopularPosts3,").find("img").each(function(b,a){a=$(a);a.attr({src:a.attr("src").replace(/s\B\d{2,4}/,"s300")});a.attr("width",300);a.attr("height",300)})});
 
-$(document).ready(function(){$(".avatar-image-container").find("img").each(function(a,b){b=$(b);b.attr({src:b.attr("src").replace(/s\B\d{2,4}/,"s90")});b.attr("width",90);b.attr("height",90)})});window.onload=function(){var a=document.getElementById("templateclue");null==a&&(window.location.href="http://www.templateclue.com/");a.setAttribute("href","http://www.templateclue.com/");a.setAttribute("ref","nofollow");a.setAttribute("title","Free Blogger Templates");a.innerHTML="Free Blogger Templates"};
+$(document).ready(function(){$(".avatar-image-container").find("img").each(function(a,b){b=$(b);b.attr({src:b.attr("src").replace(/s\B\d{2,4}/,"s90")});b.attr("width",90);b.attr("height",90)})});
+
+window.onload=function(){var a=document.getElementById("templateclue");null==a&&(window.location.href="http://www.templateclue.com/");a.setAttribute("href","http://www.templateclue.com/");a.setAttribute("ref","nofollow");a.setAttribute("title","Free Blogger Templates");a.innerHTML="Free Blogger Templates"};
 
 var relatedTitles=[],relatedTitlesNum=0,relatedUrls=[],thumburl=[];
 function related_results_labels_thumbs(g){for(var e=0;e<g.feed.entry.length;e++){var f=g.feed.entry[e];relatedTitles[relatedTitlesNum]=f.title.$t;try{thumburl[relatedTitlesNum]=f.media$thumbnail.url}catch(k){s=f.content.$t,a=s.indexOf("<img"),b=s.indexOf('src="',a),c=s.indexOf('"',b+5),d=s.substr(b+5,c-b-5),thumburl[relatedTitlesNum]=-1!=a&&-1!=b&&-1!=c&&""!=d?d:"undefined"!==typeof defaultnoimage?defaultnoimage:"http://4.bp.blogspot.com/-ZoL4BRpPhkw/U6wnup4_6gI/AAAAAAAAACA/sKpM61pmJPo/s1600/no_pic_available.jpg"}35<relatedTitles[relatedTitlesNum].length&&
