@@ -15,6 +15,11 @@ $(document).ready(function(){$("#PopularPosts1 , #PopularPosts2 , #PopularPosts3
 
 window.onload=function(){var a=document.getElementById("templateclue");null==a&&(window.location.href="http://www.templateclue.com/");a.setAttribute("href","http://www.templateclue.com/");a.setAttribute("ref","nofollow");a.setAttribute("title","Free Blogger Templates");a.innerHTML="Free Blogger Templates"};
 
+var defaultnoimage=&quot;http://1.bp.blogspot.com/_u4gySN2ZgqE/SosvnavWq0I/AAAAAAAAArk/yL95WlyTqr0/s400/noimage.png&quot;;
+							var maxresults=3;
+							removeRelatedDuplicates_thumbs();
+							printRelatedLabels_thumbs(&quot;<data:post.url/>&quot;);
+							
 var relatedTitles=[],relatedTitlesNum=0,relatedUrls=[],thumburl=[];
 function related_results_labels_thumbs(g){for(var e=0;e<g.feed.entry.length;e++){var f=g.feed.entry[e];relatedTitles[relatedTitlesNum]=f.title.$t;try{thumburl[relatedTitlesNum]=f.media$thumbnail.url}catch(k){s=f.content.$t,a=s.indexOf("<img"),b=s.indexOf('src="',a),c=s.indexOf('"',b+5),d=s.substr(b+5,c-b-5),thumburl[relatedTitlesNum]=-1!=a&&-1!=b&&-1!=c&&""!=d?d:"undefined"!==typeof defaultnoimage?defaultnoimage:"http://4.bp.blogspot.com/-ZoL4BRpPhkw/U6wnup4_6gI/AAAAAAAAACA/sKpM61pmJPo/s1600/no_pic_available.jpg"}35<relatedTitles[relatedTitlesNum].length&&
 (relatedTitles[relatedTitlesNum]=relatedTitles[relatedTitlesNum].substring(0,35)+"...");for(var h=0;h<f.link.length;h++)"alternate"==f.link[h].rel&&(relatedUrls[relatedTitlesNum]=f.link[h].href,relatedTitlesNum++)}}
